@@ -1,0 +1,12 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: FirstApp
+  buildpack: sdk-for-nodejs
+  command: npm start
+  memory: 256MB
+  domain: mybluemix.net
+  host: my-first-chat-app
+  services:
+    - first-app-push-1569074997502-53728

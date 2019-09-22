@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "push_apikey": {
+    "searchPatterns": [
+      "user-provided:first-app-push-1569074997502:apikey",
+      "cloudfoundry:$['imfpush'][0].credentials.apikey",
+      "env:service_push:$.apikey",
+      "env:push_apikey",
+      "file:/server/localdev-config.json:$.push_apikey"
+    ]
+  },
+  "push": {
+    "credentials": {
+      "searchPatterns": [
+        "user-provided:first-app-push-1569074997502:url",
+        "cloudfoundry:push",
+        "env:push_credentials",
+        "file:/server/localdev-config.json:push_credentials"
+      ]
+    }
+  },
+  "push_app_guid": {
+    "searchPatterns": [
+      "user-provided:first-app-push-1569074997502:appGuid",
+      "cloudfoundry:$['imfpush'][0].credentials.appGuid",
+      "env:service_push:$.appGuid",
+      "env:push_appGuid",
+      "file:/server/localdev-config.json:$.push_appGuid"
+    ]
+  },
+  "push_client_secret": {
+    "searchPatterns": [
+      "user-provided:first-app-push-1569074997502:clientSecret",
+      "cloudfoundry:$['imfpush'][0].credentials.clientSecret",
+      "env:service_push:$.clientSecret",
+      "env:push_clientSecret",
+      "file:/server/localdev-config.json:$.push_clientSecret"
+    ]
+  },
+  "push_url": {
+    "searchPatterns": [
+      "user-provided:first-app-push-1569074997502:url",
+      "cloudfoundry:$['imfpush'][0].credentials.url",
+      "env:service_push:$.url",
+      "env:push_url",
+      "file:/server/localdev-config.json:$.push_url"
+    ]
+  }
+}
