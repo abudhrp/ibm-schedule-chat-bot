@@ -57,7 +57,7 @@ div {
 }
 
 #contentParent {
-  height: 100vh;
+  min-height: 100vh;
   background: #ecf0f1;
 }
 
@@ -85,7 +85,7 @@ div {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0 0 1rem 0;
+  padding: 0;
   margin: auto;
   text-align: left;
   max-width: 25rem;
@@ -281,8 +281,10 @@ input:-moz-placeholder {
   border: 1px solid #3498db;
   padding: 10px;
   border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+}
+
+.chat-input {
+  padding: 0 1rem 1rem 1rem;
 }
 
 #textInputDummy {
