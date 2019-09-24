@@ -59,6 +59,9 @@ div {
 #contentParent {
   min-height: 100vh;
   background: #ecf0f1;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
 }
 
 .responsive-columns-wrapper {
@@ -82,13 +85,15 @@ div {
 }
 
 .chat-column {
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
   margin: auto;
   text-align: left;
-  max-width: 25rem;
+  /* max-width: 25rem; */
   min-width: 9.375rem;
   background: white;
 }
