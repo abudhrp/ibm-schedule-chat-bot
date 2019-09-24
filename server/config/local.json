@@ -1,3 +1,7 @@
 {
-  "port": 3000
+  "port": 3000,
+  "ASSISTANT_ID": "e0e9b277-cb7e-454e-a0a5-222520979787",
+  "ASSISTANT_IAM_APIKEY": "qI2nZyEdGjGiLLMbXW-YwQySwyGbmx36MZhEu1EEZGrl",
+  "ASSISTANT_IAM_URL": "https://gateway-syd.watsonplatform.net/assistant/api",
+  "ASSISTANT_URL": "https://gateway-syd.watsonplatform.net/assistant/api"
 }
