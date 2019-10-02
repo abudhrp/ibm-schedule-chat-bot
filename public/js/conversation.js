@@ -3,6 +3,7 @@
 /* eslint no-unused-vars: "off" */
 /* global Api: true, Common: true*/
 
+var resdata = [];
 var ConversationPanel = (function () {
   var settings = {
     selectors: {
@@ -280,8 +281,20 @@ var ConversationPanel = (function () {
     }
 
     var responses = [];
-
     if (newPayload.hasOwnProperty('output')) {
+      var resOutput = newPayload.output.user_defined;
+      if (resOutput) {
+        if (resOutput.schedule) {
+          var splitData = resOutput.schedule.split(" + ");
+          var setResult = {
+            kegiatan: splitData[0],
+            tanggal: splitData[1],
+            jam: splitData[2],
+          }
+          resdata.push(setResult);
+        }
+      }
+
       if (newPayload.output.hasOwnProperty('generic')) {
 
         var generic = newPayload.output.generic;
@@ -307,6 +320,7 @@ var ConversationPanel = (function () {
         });
       }
     }
+    console.log(resdata);
     return responses;
   }
 
@@ -319,6 +333,10 @@ var ConversationPanel = (function () {
   function sendMessage(text) {
     // Send the user message
     Api.sendRequest(text);
+  }
+
+  function getResult() {
+    return resdata;
   }
 
   // Handles the submission of input
