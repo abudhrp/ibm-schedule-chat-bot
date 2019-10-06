@@ -178,4 +178,8 @@ app.use(function (err, req, res, next) {
   res.sendFile(path.join(__dirname, '../public', '500.html'));
 });
 
+app.get('/result', function(req,res){
+  res.sendfile(__dirname + '/public/result.html');
+});
+
 module.exports = server;

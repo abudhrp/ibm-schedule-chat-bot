@@ -335,10 +335,6 @@ var ConversationPanel = (function () {
     Api.sendRequest(text);
   }
 
-  function getResult() {
-    return resdata;
-  }
-
   // Handles the submission of input
   function inputKeyDown(event, inputBox) {
     // Submit on enter key, dis-allowing blank messages
@@ -350,3 +346,7 @@ var ConversationPanel = (function () {
     }
   }
 }());
+
+function showResult() {
+  console.log(resdata);
+}
